@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('competitions', function (Blueprint $table) {
+            $table->boolean('enforce_single_team_rule')
+                ->after('min_team_size')
+                ->default(false);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('competitions', function (Blueprint $table) {
+            $table->dropColumn('enforce_single_team_rule');
+        });
+    }
+};
