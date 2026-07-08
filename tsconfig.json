@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "public/js", // Directory for generated JS files
+    "rootDir": "resources/js",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "ignoreDeprecations": "6.0",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["./resources/js/*"],
+    }
+  },
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.tsx",
+    "resources/js/**/*.d.ts",
+  ]
+}
